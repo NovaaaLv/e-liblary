@@ -14,6 +14,9 @@ export default {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
+            boxShadow: {
+                primary: "0 3px 10px rgba(0,0,0,0.1)",
+            },
         },
     },
 
@@ -30,9 +33,6 @@ export default {
                     transitionProperty: "all",
                     transitionDuration: "300ms",
                     transitionTimingFunction: "ease-in-out",
-                },
-                ".shadow-primary": {
-                    boxShadow: "0px 0px 10px rgba(67, 118, 108, 0.3)",
                 },
             });
         },

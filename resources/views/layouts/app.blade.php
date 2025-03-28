@@ -21,12 +21,18 @@
 
 <body class="font-sans antialiased">
 
-  @include('components.common.navbar-dashboard')
 
-  @include('components.common.sidebar')
 
-  <div class="p-4 bg-red-200 sm:ml-64">
-    {{$slot}}
+  <div class="flex flex-col">
+    @include('components.common.navbar-dashboard')
+    <div class="flex w-full">
+      @include('components.common.sidebar')
+      <div class="w-full">
+        <main class="">
+          {{$slot}}
+        </main>
+      </div>
+    </div>
   </div>
 </body>
 

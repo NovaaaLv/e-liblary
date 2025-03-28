@@ -14,7 +14,7 @@ return new class extends Migration
     Schema::create('pvt_buku_kategoris', function (Blueprint $table) {
       $table->id();
       $table->foreignId('buku_id')->constrained('bukus')->onDelete('cascade');
-      $table->foreignId('kategori_id')->constrained('ref_kategoris')->onDelete('cascade');
+      $table->foreignId('ref_kategori_id')->constrained('ref_kategoris')->onDelete('cascade');
       $table->timestamps();
     });
   }
