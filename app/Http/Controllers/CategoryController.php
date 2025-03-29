@@ -30,4 +30,19 @@ class CategoryController extends Controller
 
     return back()->with('success', 'Category Successfully Added!');
   }
+
+  public function update(Request $request, $id)
+  {
+    $category = RefKategori::findOrFail($id);
+
+    $request->validate([
+      'nama_kategori' => 'required'
+    ]);
+
+    $category->update([
+      'nama_kategori' => $request->nama_kategori
+    ]);
+
+    return redirect(route('admin.books.category.index'))->with('success', 'Category Successfully Updated!');
+  }
 }

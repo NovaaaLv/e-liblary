@@ -17,12 +17,11 @@
 
   <!-- Scripts -->
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @stack('css')
 </head>
 
 <body class="font-sans antialiased">
-
-
-
+  @stack('modal')
   <div class="flex flex-col">
     @include('components.common.navbar-dashboard')
     <div class="flex w-full">
@@ -34,6 +33,8 @@
       </div>
     </div>
   </div>
+
+  @stack('script')
 </body>
 
 </html>

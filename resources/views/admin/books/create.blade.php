@@ -25,7 +25,7 @@
         <div class="flex gap-5 w-full items-start">
           <x-form.input label="Name Of Book" id="judul_buku" name="judul_buku" />
           <x-form.select.multiple label="Category" id="category_name" name="kategori_ids[]" :datas="$categorys"
-            value="id" />
+            data_field="nama_kategori" value="id" />
         </div>
         <div class="flex gap-5 w-full items-start mt-5">
           <x-form.input label="Author" id="penulis" name="penulis" />

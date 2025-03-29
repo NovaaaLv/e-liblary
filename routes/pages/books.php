@@ -13,5 +13,6 @@ Route::middleware(['auth', 'role:admin'])->prefix('books')->as('books.')->group(
     Route::get('/index', [CategoryController::class, 'index'])->name('index');
     Route::get('/create', [CategoryController::class, 'create'])->name('create');
     Route::post('/store', [CategoryController::class, 'store'])->name('store');
+    Route::put('/update/{id}', [CategoryController::class, 'update'])->name('update');
   });
 });
